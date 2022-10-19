@@ -15,22 +15,22 @@
       <div class="intro-text">
         <h2>¡Reta tus límites!</h2>
         <p>Resolviendo retos de programación de</p>
-        <a href="https://www.frontendmentor.io/">frontendmentor.io</a>
+        <a href="https://www.frontendmentor.io/" target="_blank">frontendmentor.io</a>
         <p>
-          Se usan diferentes herramientas como HTML, CSS, JavaScript, APIs y
-          demás...
+          Tiene diferentes niveles de dificultad, puedes practicar con distintas
+          herramientas como HTML, CSS, JavaScript y APIs, además de usar tus Frameworks favoritos.
         </p>
-        <p>Pero mejor que leerlo, es verlo!!</p>
+        <p>Pero mejor que leerlo, ¡Es verlo!</p>
       </div>
     </section>
 
     <section class="projects">
       <h2>Proyectos</h2>
-      <article>
-        <a href="#">
-          <img src="../../../assets/images/laptop.png" alt="Laptop image" />
-          <h4>Titulo del proyecto</h4>
-          <p>Descripción</p>
+      <article *ngFor="let project of projects">
+        <a [href]="project.path">
+          <img [src]="project.img" [alt]="project.alt" />
+          <h4>{{ project.title }}</h4>
+          <p>{{ project.description }}</p>
         </a>
       </article>
     </section>

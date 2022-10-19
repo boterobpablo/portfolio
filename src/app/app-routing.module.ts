@@ -8,6 +8,10 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'product-card',
+    loadChildren: () => import('./screens/product-card/product-card.module').then(m => m.ProductCardModule)
+  },
+  {
     path: '**',
     redirectTo: ''
   },
