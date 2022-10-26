@@ -4,23 +4,27 @@ import { Project } from 'src/app/interfaces/project';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-
   projects: Project[] = [
     {
       title: 'Product Preview Card',
-      description: 'HTML CSS',
+      description: 'HTML, CSS',
       path: '/product-card',
-      img: '/assets/images/product-card-design.jpg',
-      alt: 'Product Preview Card'
-    }
-  ]
+      img: '/assets/images/product-card-design.webp',
+      alt: 'Product Preview Card',
+    },
+    {
+      title: 'Tip Calculator',
+      description: 'HTML, CSS, JS',
+      path: '/tip-calculator',
+      img: '/assets/images/tip-calculator-design.webp',
+      alt: 'Tip calculator',
+    },
+  ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

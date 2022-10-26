@@ -1,0 +1,107 @@
+<div class="wrapper">
+  <header>
+    <h1 class="title">SPLI<br />TTER</h1>
+  </header>
+
+  <main class="card">
+    <div class="entries">
+      <div class="bill">
+        <label for="bill" class="color-gray">Bill</label>
+        <br />
+        <input
+          (ngModelChange)="billInputChange($event)"
+          [(ngModel)]="billInput"
+          type="number"
+          id="bill"
+          name="bill"
+          class="dollarIcon"
+          placeholder="0"
+          min="0"
+        />
+      </div>
+
+      <div class="tip">
+        <span class="color-gray">Select Tip %</span>
+        <div class="buttons">
+          <button #tipButton value="5" class="unselectedTip" (click)="changeTip($event)">
+            5%
+          </button>
+          <button #tipButton value="10" class="unselectedTip" (click)="changeTip($event)">
+            10%
+          </button>
+          <button #tipButton value="15" class="unselectedTip" (click)="changeTip($event)">
+            15%
+          </button>
+          <button #tipButton value="25" class="unselectedTip" (click)="changeTip($event)">
+            25%
+          </button>
+          <button #tipButton value="50" class="unselectedTip" (click)="changeTip($event)">
+            50%
+          </button>
+          <input
+            (ngModelChange)="customInputChange($event)"
+            [(ngModel)]="customInput"
+            type="number"
+            id="custom"
+            name="custom"
+            placeholder="Custom"
+            min="0"
+            max="100"
+          />
+        </div>
+      </div>
+
+      <div class="people">
+        <div class="people-labels">
+          <label for="people" class="color-gray">Number of people</label>
+          <span *ngIf="this.invalidPeopleInput" class="people-error">Must be greater than zero</span>
+        </div>
+        <input
+          (ngModelChange)="peopleInputChange($event)"
+          [(ngModel)]="peopleInput"
+          type="number"
+          id="people"
+          name="people"
+          class="personIcon"
+          placeholder="0"
+          min="1"
+        />
+      </div>
+    </div>
+
+    <div class="total">
+      <div>
+        <div class="total-tip">
+          <div>
+            <span>Tip Amount</span> <br />
+            <span class="total-person">/ person</span>
+          </div>
+          <div class="total-amount" id="total-tip">
+            {{ this.totalTip | currency }}
+          </div>
+        </div>
+
+        <div class="total-general">
+          <div>
+            <span>Total</span> <br />
+            <span class="total-person">/ person</span>
+          </div>
+          <div class="total-amount" id="total-general">
+            {{ this.totalGeneral | currency }}
+          </div>
+        </div>
+      </div>
+
+      <button id="resetButton" (click)="resetValues()">
+        RESET
+      </button>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+    >. Coded by <a href="#">Juanpa</a>.
+  </footer>
+</div>

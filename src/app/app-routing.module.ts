@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./screens/product-card/product-card.module').then(m => m.ProductCardModule)
   },
   {
+    path: 'tip-calculator',
+    loadChildren: () => import('./screens/tip-calculator/tip-calculator.module').then(m => m.TipCalculatorModule)
+  },
+  {
     path: '**',
     redirectTo: ''
   },

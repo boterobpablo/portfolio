@@ -4,10 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
   --mobile: 375px;
   --desktop: 1440px;
   --dark-cyan: hsl(158, 36%, 37%);
@@ -15,6 +11,10 @@
   --dark-blue: hsl(212, 21%, 14%);
   --grayish-blue: hsl(228, 12%, 48%);
   --white: hsl(0, 0%, 100%);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 .wrapper {
