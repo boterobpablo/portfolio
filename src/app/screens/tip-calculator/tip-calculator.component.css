@@ -8,21 +8,18 @@
   --light-grayish-cyan: hsl(185, 41%, 84%);
   --very-light-grayish-cyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   color: var(--very-dark-cyan);
 }
 
 .wrapper {
+  align-items: center;
   background-color: var(--light-grayish-cyan);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  min-height: 100vh;
 }
 
 button{
@@ -31,35 +28,35 @@ button{
 
 .title {
   font-size: 24px;
-  margin: 20px 0;
   letter-spacing: 5px;
+  margin: 20px 0;
 }
 
 .card {
-  width: 100%;
-  max-width: 900px;
+  background-color: var(--white);
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  background-color: var(--white);
+  max-width: 900px;
   padding: 40px;
-  border-radius: 20px;
+  width: 100%;
 }
 .color-gray{
   color: var(--grayish-cyan)
 }
 
 input {
-  display: inline-block;
-  width: 100%;
-  font-size: 24px;
-  border: none;
   background-color: var(--very-light-grayish-cyan);
   border-radius: 5px;
-  padding: 5px 10px;
-  margin-top: 5px;
+  border: none;
+  display: inline-block;
+  font-size: 24px;
   margin-bottom: 25px;
+  margin-top: 5px;
+  padding: 5px 10px;
   text-align: right;
+  width: 100%;
 }
 
 input:focus {
@@ -67,16 +64,16 @@ input:focus {
 }
 
 .dollarIcon {
-  background: url("/assets/images/tip-calculator-dollar.svg") no-repeat;
+  background-color: var(--very-light-grayish-cyan);
   background-position: 14px 14px;
   background-size: 11px;
-  background-color: var(--very-light-grayish-cyan);
+  background: url("/assets/images/tip-calculator-dollar.svg") no-repeat;
 }
 .personIcon {
-  background: url("/assets/images/tip-calculator-person.svg") no-repeat;
+  background-color: var(--very-light-grayish-cyan);
   background-position: 14px 15px;
   background-size: 12px;
-  background-color: var(--very-light-grayish-cyan);
+  background: url("/assets/images/tip-calculator-person.svg") no-repeat;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -92,9 +89,9 @@ input[type="number"] {
 }
 
 #custom{
-  width: 120px;
   margin: 0;
   text-align: center;
+  width: 120px;
 }
 
 input:invalid{
@@ -102,10 +99,10 @@ input:invalid{
 }
 
 .people-labels{
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 4px
+  display: flex;
+  gap: 4px;
+  justify-content: space-between;
 }
 
 .people-error{
@@ -114,20 +111,20 @@ input:invalid{
 }
 
 .buttons {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 10px;
   margin-bottom: 25px;
+  margin-top: 10px;
+  width: 100%;
 }
 
 .buttons button {
-  font-size: 24px;
-  width: 120px;
-  border: none;
   border-radius: 5px;
+  border: none;
+  font-size: 24px;
   padding: 5px 0;
+  width: 120px;
 }
 
 .unselectedTip{
@@ -141,18 +138,18 @@ input:invalid{
 }
 
 .total {
-  height: 100%;
   background-color: var(--very-dark-cyan);
   border-radius: 10px;
   color: var(--white);
+  height: 100%;
   padding: 40px 20px 20px 20px;
 }
 
 .total-tip,
 .total-general {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .total-tip span,
@@ -177,20 +174,20 @@ input:invalid{
 }
 
 .total button {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 20px;
   background-color: var(--strong-cyan);
-  color: var(--very-dark-cyan);
-  border: none;
   border-radius: 5px;
+  border: none;
+  color: var(--very-dark-cyan);
+  font-size: 20px;
+  padding: 10px 0;
+  width: 100%;
 }
 
 .attribution {
   font-size: 11px;
-  text-align: center;
-  margin-top: 40px;
   margin-bottom: 10px;
+  margin-top: 40px;
+  text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -198,21 +195,21 @@ input:invalid{
 
 @media (min-width: 680px) {
   .card {
-    flex-direction: row;
     align-items: center;
-    gap: 40px;
+    flex-direction: row;
     flex-grow: 0;
+    gap: 40px;
   }
 
   .total {
+    align-items: center;
     display: flex;
     flex-direction: column;
+    gap: 80px;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
     max-width: 400px;
     padding: 50px 30px;
-    gap: 80px;
+    width: 100%;
   }
 
   .total div {
