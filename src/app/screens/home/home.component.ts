@@ -22,6 +22,13 @@ export class HomeComponent implements OnInit {
       img: '/assets/images/tip-calculator-design.webp',
       alt: 'Tip calculator',
     },
+    {
+      title: 'Advice generator',
+      description: 'HTML, CSS, JS, API',
+      path: '/advice-generator',
+      img: '/assets/images/advice-generator-design.webp',
+      alt: 'Advice generator',
+    },
   ];
 
   constructor() {}

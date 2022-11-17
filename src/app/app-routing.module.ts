@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./screens/tip-calculator/tip-calculator.module').then(m => m.TipCalculatorModule)
   },
   {
+    path: 'advice-generator',
+    loadChildren: () => import('./screens/advice-generator/advice-generator.module').then(m => m.AdviceGeneratorModule)
+  },
+  {
     path: '**',
     redirectTo: ''
   },
