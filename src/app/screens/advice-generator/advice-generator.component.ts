@@ -13,7 +13,9 @@ export class AdviceGeneratorComponent implements OnInit {
 
   constructor(private service: AdviceGeneratorService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getAdvice();
+  }
 
   getAdvice() {
     this.service.getAdvice().subscribe((advice: Advice) => {
