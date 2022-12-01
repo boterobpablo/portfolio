@@ -64,16 +64,16 @@ input:focus {
 }
 
 .dollarIcon {
+  background: url("/assets/images/tip-calculator-dollar.svg") no-repeat;
+  background-size: 11px;
   background-color: var(--very-light-grayish-cyan);
   background-position: 14px 14px;
-  background-size: 11px;
-  background: url("/assets/images/tip-calculator-dollar.svg") no-repeat;
 }
 .personIcon {
+  background: url("/assets/images/tip-calculator-person.svg") no-repeat;
+  background-size: 12px;
   background-color: var(--very-light-grayish-cyan);
   background-position: 14px 15px;
-  background-size: 12px;
-  background: url("/assets/images/tip-calculator-person.svg") no-repeat;
 }
 
 /* Chrome, Safari, Edge, Opera */

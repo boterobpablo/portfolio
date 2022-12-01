@@ -12,6 +12,7 @@
   --grayish-blue: hsl(228, 12%, 48%);
   --white: hsl(0, 0%, 100%);
   font-family: "Montserrat", sans-serif;
+  color: black;
 }
 
 .wrapper {
@@ -60,6 +61,7 @@
 .text h1 {
   font-family: "Fraunces", serif;
   font-size: 34px;
+  font-weight: bold;
 }
 
 .text p {
@@ -88,14 +90,14 @@ button {
   font-size: 16px;
   font-weight: 700;
   padding: 14px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 button:hover{
   cursor: pointer;
-}
-
-button > svg {
-  margin-right: 8px;
 }
 
 .attribution {
