@@ -1,37 +1,24 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  Input,
-  OnInit,
-  ViewChild,
-  ViewChildren,
-} from '@angular/core';
-import { findIndex } from 'rxjs';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Groups } from './interfaces/groups';
+import * as Toastify from 'toastify-js';
+import { PasswordGeneratorModule } from './password-generator.module';
 
 @Component({
   selector: 'app-password-generator',
   templateUrl: './password-generator.component.html',
   styleUrls: ['./password-generator.component.css'],
 })
-export class PasswordGeneratorComponent implements OnInit, AfterViewInit {
-  // lowercaseLetters: string[] = [
-  //   'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-  // ];
-  // uppercaseLetters: string[] = [
-  //   'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-  // ];
-  // numbers: string[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  // symbols: string[] = ['.', '+', '-', '*', '!', '#', '$', '%'];
+export class PasswordGeneratorComponent {
   @ViewChild('passwordLength') passwordLength!: ElementRef;
   @ViewChild('strengthText') strengthText!: ElementRef;
   @ViewChild('weakBar') weakBar!: ElementRef;
   @ViewChild('mediumBar') mediumBar!: ElementRef;
   @ViewChild('strongBar') strongBar!: ElementRef;
   @ViewChild('error') error!: ElementRef;
+  @ViewChild('notification') notification!: ElementRef;
   password: string = 'Password';
   length: number = 0;
+  showNotification = false;
   groups: Groups = {
     lowercase: [
       'a',
@@ -96,21 +83,12 @@ export class PasswordGeneratorComponent implements OnInit, AfterViewInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    // this.getPassword();
-    // this.groups[]
-  }
-
-  ngAfterViewInit(): void {
-    // console.log(this.lowercaseCheckbox.nativeElement.checked);
-  }
-
   getPassword() {
     this.password = '';
     this.error.nativeElement.style.display = 'none';
     this.length = Number(this.passwordLength.nativeElement.value) ?? 0;
     if (this.length === 0 || this.groupsIncluded.length === 0) {
-      this.resetValues();
+      this.valuesOnError();
       return;
     }
     for (let i = 0; i < this.length; i++) {
@@ -150,7 +128,7 @@ export class PasswordGeneratorComponent implements OnInit, AfterViewInit {
     }
   }
 
-  resetValues(): void {
+  valuesOnError(): void {
     this.strengthText.nativeElement.innerText = '';
     this.weakBar.nativeElement.classList.remove('strength-power');
     this.mediumBar.nativeElement.classList.remove('strength-power');
@@ -187,5 +165,19 @@ export class PasswordGeneratorComponent implements OnInit, AfterViewInit {
 
   copyPassword() {
     navigator.clipboard.writeText(this.password);
+    Toastify({
+      text: 'Copied!',
+      duration: 2000,
+      gravity: 'top',
+      position: 'center',
+      style: {
+        background: '#a5ffaf',
+        color: '#202020',
+        'font-family': '"Source Code Pro", monospace',
+        'font-size': '14px',
+        'font-weight': 'bold',
+        padding: '10px 15px'
+      },
+    }).showToast();
   }
 }
