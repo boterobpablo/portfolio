@@ -23,11 +23,18 @@ export class PortfolioComponent implements OnInit {
       alt: 'Tip calculator',
     },
     {
-      title: 'Advice generator',
+      title: 'Advice Generator',
       description: 'HTML, CSS, JavaScript, API',
       path: '/advice-generator',
       img: '/assets/images/advice-generator-design.webp',
       alt: 'Advice generator',
+    },
+    {
+      title: 'Password Generator',
+      description: 'HTML, CSS, JavaScript',
+      path: '/password-generator',
+      img: '/assets/images/password-generator-design.webp',
+      alt: 'Password generator',
     },
   ];
 

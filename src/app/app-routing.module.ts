@@ -29,6 +29,11 @@ const routes: Routes = [
     loadChildren: () => import('./screens/advice-generator/advice-generator.module').then(m => m.AdviceGeneratorModule)
   },
   {
+    path: 'password-generator',
+    title: 'Password Generator',
+    loadChildren: () => import('./screens/password-generator/password-generator.module').then(m => m.PasswordGeneratorModule)
+  },
+  {
     path: '**',
     redirectTo: ''
   },
