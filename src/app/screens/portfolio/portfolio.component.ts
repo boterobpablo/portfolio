@@ -9,18 +9,11 @@ import { Project } from '../../interfaces/project';
 export class PortfolioComponent implements OnInit {
   projects: Project[] = [
     {
-      title: 'Product Preview Card',
-      description: 'HTML, CSS',
-      path: '/product-card',
-      img: '/assets/images/product-card-design.webp',
-      alt: 'Product Preview Card',
-    },
-    {
-      title: 'Tip Calculator',
+      title: 'Password Generator',
       description: 'HTML, CSS, JavaScript',
-      path: '/tip-calculator',
-      img: '/assets/images/tip-calculator-design.webp',
-      alt: 'Tip calculator',
+      path: '/password-generator',
+      img: '/assets/images/password-generator-design.webp',
+      alt: 'Password generator',
     },
     {
       title: 'Advice Generator',
@@ -30,11 +23,18 @@ export class PortfolioComponent implements OnInit {
       alt: 'Advice generator',
     },
     {
-      title: 'Password Generator',
+      title: 'Tip Calculator',
       description: 'HTML, CSS, JavaScript',
-      path: '/password-generator',
-      img: '/assets/images/password-generator-design.webp',
-      alt: 'Password generator',
+      path: '/tip-calculator',
+      img: '/assets/images/tip-calculator-design.webp',
+      alt: 'Tip calculator',
+    },
+    {
+      title: 'Product Preview Card',
+      description: 'HTML, CSS',
+      path: '/product-card',
+      img: '/assets/images/product-card-design.webp',
+      alt: 'Product Preview Card',
     },
   ];
 

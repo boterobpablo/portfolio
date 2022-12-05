@@ -1,7 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Groups } from './interfaces/groups';
 import * as Toastify from 'toastify-js';
-import { PasswordGeneratorModule } from './password-generator.module';
 
 @Component({
   selector: 'app-password-generator',
