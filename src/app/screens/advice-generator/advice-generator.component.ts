@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Advice } from 'src/app/interfaces/advice';
+import { Advice } from './interfaces/advice';
 import { AdviceGeneratorService } from './services/advice-generator.service';
 
 @Component({
