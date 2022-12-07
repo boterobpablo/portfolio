@@ -6,16 +6,11 @@
 
 * {
   margin: 0;
-  padding: 0;
-  font: inherit;
 }
 
-html {
-  color-scheme: dark light;
-}
-
+html,
 body {
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 img,
@@ -25,3 +20,24 @@ video {
   display: block;
   max-width: 100%;
 }
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* html {
+  color-scheme: dark light;
+} */
